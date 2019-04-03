@@ -1,0 +1,13 @@
+ARROW FUNCTIONS IN ANGULAR
+
+var add = function(a,b){
+    return a+b;
+} //this tends to 
+
+var add = (a,b) => a+b;
+
+var alpha = function(a){
+    return a;
+}//this tends to
+
+var alpha = a => a;//here () is an optional one,because here we can using single variable only

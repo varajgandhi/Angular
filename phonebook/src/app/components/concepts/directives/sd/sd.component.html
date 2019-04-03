@@ -1,0 +1,10 @@
+<div *ngIf="isPremiumUser()">he is an premium user</div>
+<p>directive works!</p>
+<div *ngFor="let pgm of programList">{{pgm}}</div>
+
+<h2>Pipes!</h2>
+<p>Birthday date is {{birthday | date:'yyyy/MM/dd' }}</p>
+
+<h1>custom Pipes</h1>
+<p>{{loremipsum | ellipsis}}</p>
+

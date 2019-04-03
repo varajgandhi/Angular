@@ -1,0 +1,61 @@
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="si-tab" data-toggle="tab" href="#si" role="tab" aria-controls="home"
+          aria-selected="true">String Interpolation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pb-tab" data-toggle="tab" href="#pb" role="tab" aria-controls="profile"
+          aria-selected="false">Property Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="cpb-tab" data-toggle="tab" href="#cpb" role="tab" aria-controls="contact"
+          aria-selected="false">Custom Property Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="eb-tab" data-toggle="tab" href="#eb" role="tab" aria-controls="contact"
+          aria-selected="false">Event Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="ceb-tab" data-toggle="tab" href="#ceb" role="tab" aria-controls="contact"
+          aria-selected="false">Custom Event Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="twb-tab" data-toggle="tab" href="#twb" role="tab" aria-controls="contact"
+          aria-selected="false">Two way Binding</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="dir-tab" data-toggle="tab" href="#dir" role="tab" aria-controls="contact"
+            aria-selected="false">Directives</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+
+      <!-- String Interpolcation Content-->
+      <div class="tab-pane fade show active" id="si" role="tabpanel">
+        <app-si></app-si>
+      </div>
+
+      <!-- Property Binding Tab Content-->
+      <div class="tab-pane fade" id="pb" role="tabpanel" >
+          <app-pb></app-pb>
+      </div>
+      <!-- Custom Propery Binding -->
+      <div class="tab-pane fade" id="cpb" role="tabpanel">
+        <app-cpb [lastVisited]="timeofLastVisit"></app-cpb>
+      </div>
+
+      <!-- Event Binding -->
+      <div class="tab-pane fade" id="eb" role="tabpanel" >
+<app-eb></app-eb>
+      </div>
+      <div class="tab-pane fade" id="ceb" role="tabpanel">
+        <app-ceb (loggedInEvent)="receiveLoggedIn($event)"></app-ceb>
+      </div>
+      <div class="tab-pane fade" id="twb" role="tabpanel"></div>
+      <app-twb></app-twb>
+    </div>
+    <div class="tab-pane fade" id="dir" role="tabpanel">
+      <app-sd></app-sd>
+    </div>
+  </div>

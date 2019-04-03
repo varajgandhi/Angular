@@ -1,0 +1,21 @@
+<!--<p>
+  contact works!
+</p>
+<p><a routerLink="/">Go Back</a></p>-->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12"><h1>View All Contacts</h1><a class="text-right" routerLink="/contacts/new" class="btn btn-primary text-right" style="margin-left:10px;">Create Contact</a></div>
+    </div>
+    <div class="row" *ngIf="contactList" >
+      <div class="card col-md-4" *ngFor="let contact of contactList">
+        <div class="card-body">
+          <h5 class="card-title"><a routerLink="/contacts/{{contact.contactId}}">{{ contact.username }}</a></h5>
+          <p class="card-text">{{ contact.phonbeno }}</p>
+          <p class="card-text">{{ contact.email }}</p>
+          <a routerLink="/contacts/{{contact.contactId}}" class="link btn btn-primary text-left">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
